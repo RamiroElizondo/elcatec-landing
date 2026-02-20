@@ -18,13 +18,7 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Copy */}
           <div className="flex-1 flex flex-col gap-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary self-center lg:self-start">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-              </span>
-              Servicio profesional certificado
-            </div>
+            
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground text-balance">
               {"SABÉS CUÁNTO VAS A PAGAR "}

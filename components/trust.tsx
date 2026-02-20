@@ -28,21 +28,21 @@ const guarantees = [
 const reviews = [
   {
     name: "María L.",
-    location: "Palermo, CABA",
+    location: "Santa Lucia, San Juan",
     rating: 5,
-    text: "Excelente servicio. Llegaron puntual, hicieron el trabajo rápido y dejaron todo limpio. El precio fue exacto al presupuesto.",
+    text: "Excelente servicio. Llegaron puntual, hicieron el trabajo rápido y dejaron todo limpio. El precio estuvo bien.",
   },
   {
     name: "Carlos R.",
-    location: "Vicente López",
+    location: "Rawson, San Juan",
     rating: 5,
     text: "Contraté el paquete Hogar Seguro y quedé muy conforme. Profesionales serios y con conocimiento. Lo recomiendo.",
   },
   {
     name: "Ana G.",
-    location: "Belgrano, CABA",
+    location: "Captal, San Juan",
     rating: 5,
-    text: "El presupuesto virtual me ahorró tiempo. Mandaron todo detallado por WhatsApp y el precio final fue el mismo.",
+    text: "El presupuesto virtual me ahorró tiempo. Mandaron todo detallado por WhatsApp y el precio final fue el adecuado.",
   },
 ]
 

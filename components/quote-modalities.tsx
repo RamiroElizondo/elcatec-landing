@@ -51,7 +51,7 @@ export function QuoteModalities() {
             <div className="flex flex-col gap-2">
               {[
                 "Respuesta en menos de 24hs",
-                "Sin costo alguno",
+                "Sin perdidas de tiempo",
                 "Presupuesto detallado por WhatsApp",
               ].map((item) => (
                 <div

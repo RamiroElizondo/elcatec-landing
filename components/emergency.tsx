@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Zap, AlertTriangle, Clock, MessageCircle } from "lucide-react"
 
 const EMERGENCY_CASES = [
+  "Cualquier problema que impida tener suministro eléctrico",
+  "Si el problema es de los proveedores de energia electrica no podremos resolverlo",
   "Cortocircuito",
   "Fuga eléctrica",
   "Falla de conductores",
-  "Cualquier problema que impida tener suministro eléctrico",
 ]
 
 export function Emergency() {
@@ -92,7 +93,7 @@ export function Emergency() {
             <span className="text-sm font-semibold text-muted-foreground">
               Antes de las 20:00 hs
             </span>
-            <span className="text-4xl font-black text-primary">$50.000</span>
+            <span className="text-4xl font-black text-primary">Desde $50.000</span>
             {selectedTime === "before" && (
               <span className="absolute -top-3 right-4 rounded-full bg-primary px-3 py-0.5 text-[11px] font-bold text-primary-foreground">
                 Seleccionado
