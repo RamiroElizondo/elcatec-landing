@@ -376,9 +376,6 @@ export function QuoteCalculator() {
                     }`}
                   >
                     <span className="font-medium text-sm">{z.label}</span>
-                    <span className="text-[11px] text-muted-foreground">
-                      {z.mult === 1 ? "Sin recargo" : `+${Math.round((z.mult - 1) * 100)}% recargo`}
-                    </span>
                   </button>
                 ))}
               </div>
@@ -405,7 +402,6 @@ export function QuoteCalculator() {
                     <span className="font-medium">{p.label}</span>
                     <span className="text-xs text-muted-foreground">
                       {p.description}
-                      {p.mult > 1 ? ` (+${Math.round((p.mult - 1) * 100)}%)` : ""}
                     </span>
                   </button>
                 ))}
