@@ -142,7 +142,7 @@ export function Booking() {
                 </p>
                 <p>
                   <strong className="text-card-foreground">Si solo necesitás la visita:</strong>{" "}
-                  abonás los $30.000 de la visita y, si decidís hacer el trabajo otro día, se te informa el valor actualizado en ese momento.
+                  abonás $30.000 por la visita y, si decidís hacer el trabajo se programa otro día para la realización del mismo. Dicho monto se descontará del valor del presupuesto final.
                 </p>
               </div>
             </div>
