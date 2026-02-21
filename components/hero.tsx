@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Calculator, MessageCircle, ChevronDown } from "lucide-react"
@@ -80,10 +78,11 @@ export function Hero() {
           <div className="flex-1 relative">
             <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/5">
               <Image
-                src="/images/hero-electrician.jpg"
+                src="/images/hero-electrician-optimized.jpg"
                 alt="Electricista profesional de ELCATEC trabajando"
                 width={600}
                 height={500}
+                sizes="(max-width: 768px) 100vw, 600px"
                 className="w-full h-auto object-cover"
                 priority
               />

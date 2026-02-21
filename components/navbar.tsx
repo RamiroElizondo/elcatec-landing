@@ -18,8 +18,17 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20)
-    window.addEventListener("scroll", handler)
+    let ticking = false
+    const handler = () => {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(() => {
+        const next = window.scrollY > 20
+        setScrolled((prev) => (prev === next ? prev : next))
+        ticking = false
+      })
+    }
+    window.addEventListener("scroll", handler, { passive: true })
     return () => window.removeEventListener("scroll", handler)
   }, [])
 

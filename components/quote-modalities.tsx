@@ -1,5 +1,3 @@
-"use client"
-
 import { Camera, Video, FileText, MapPin, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 

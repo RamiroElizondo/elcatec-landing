@@ -1,5 +1,3 @@
-"use client"
-
 import { Banknote, CreditCard, Landmark, Layers } from "lucide-react"
 
 const methods = [

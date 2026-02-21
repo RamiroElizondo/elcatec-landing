@@ -1,5 +1,3 @@
-"use client"
-
 import { ShieldCheck, Award, Clock, Sparkles, Star } from "lucide-react"
 
 const guarantees = [

@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { MessageCircle, ArrowRight, Instagram, Image } from "lucide-react"
 
