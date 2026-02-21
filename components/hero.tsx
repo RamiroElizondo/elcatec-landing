@@ -58,8 +58,8 @@ export function Hero() {
             {/* Stats */}
             <div className="flex items-center gap-8 justify-center lg:justify-start pt-4">
               {[
-                { value: "500+", label: "Trabajos realizados" },
-                { value: "4.9", label: "Calificación" },
+                { value: "300+", label: "Trabajos realizados" },
+                { value: "9.9", label: "Calificación" },
                 { value: "24hs", label: "Respuesta" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">

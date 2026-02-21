@@ -1,0 +1,88 @@
+# ================================================
+# ELCATEC.ONLINE - Performance (Apache/LiteSpeed)
+# Safe for WordPress. Place this BEFORE WP rules.
+# ================================================
+
+# --- GZIP compression (mod_deflate) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+  AddOutputFilterByType DEFLATE application/font-woff application/font-woff2
+
+  # Do not compress binary/already-compressed formats
+  SetEnvIfNoCase Request_URI \.(?:jpg|jpeg|png|gif|webp|avif|mp4|mp3|pdf|zip|gz|bz2|rar|7z)$ no-gzip dont-vary
+</IfModule>
+
+# --- Brotli compression (mod_brotli) optional ---
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/json application/xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+  AddOutputFilterByType BROTLI_COMPRESS font/ttf font/otf font/woff font/woff2
+  AddOutputFilterByType BROTLI_COMPRESS application/font-woff application/font-woff2
+</IfModule>
+
+# --- Browser cache (mod_expires) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML: short cache
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS/JS
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+
+  # Images/SVG/WebP/AVIF/ICO
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# --- Cache-Control / ETag ---
+<IfModule mod_headers.c>
+  # Static assets: cache long + immutable
+  <FilesMatch "\.(?:css|js|jpg|jpeg|png|gif|webp|avif|svg|ico|woff|woff2|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML: short cache
+  <FilesMatch "\.(?:html)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+# Enable ETag (single-node OK)
+FileETag MTime Size
+
+# ================================================
+# BEGIN WordPress (do not edit between markers)
+# ================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# ================================================
+# END WordPress
+# ================================================
