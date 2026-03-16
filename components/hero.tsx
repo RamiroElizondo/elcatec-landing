@@ -78,7 +78,7 @@ export function Hero() {
           <div className="flex-1 relative">
             <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/5">
               <Image
-                src="/images/hero-electrician-optimized.jpg"
+                src="/images/hero-electrician-optimized.png"
                 alt="Electricista profesional de ELCATEC trabajando"
                 width={600}
                 height={500}

@@ -15,6 +15,7 @@ import {
 const WORK_TYPES = [
   { id: "toma", label: "Cambio de toma", base: 15000, time: 0.5 },
   { id: "ventilador", label: "Instalación de ventilador", base: 30000, time: 2 },
+  { id: "foto_control", label: "Colocación de foto control", base: 18000, time: 1.5 },
   { id: "punto", label: "Punto eléctrico nuevo", base: 15000, time: 0.5 },
   { id: "termica", label: "Cambio de térmica", base: 18000, time: 1.5 },
   { id: "luminaria", label: "Colocación de aplique", base: 10000, time: 0.4 },
